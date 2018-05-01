@@ -39,3 +39,4 @@ function dirty_status {
 
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(branch_status)\[\033[00m\] \n$ "
 ```
+- Restart the terminal
