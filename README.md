@@ -24,7 +24,8 @@ function dirty_status {
         unset dirty deleted untracked newfile copied renamed
         while read line ; do
             case "${line//[[:space:]]/}" in
-                @('M'|'UU')*)  dirty='!' ; ;;
+                'M'*)          dirty='!' ; ;;
+                'UU'*)         dirty='!' ; ;;
                 'D'*)          deleted='x' ; ;;
                 '??'*)         untracked='?' ; ;;
                 'A'*)          newfile='+' ; ;;
